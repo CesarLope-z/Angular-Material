@@ -1,0 +1,13 @@
+.componente{
+    border: 1px solid purple;
+    color: purple;
+    background-color: rgb(219, 150, 219);
+    margin: 1rem;
+    padding: 0 10px;
+}
+.componente-area{
+    border: 1px solid purple;
+    background-color: white;
+    min-height: 100px;
+    margin: 1rem;
+}

@@ -1,0 +1,17 @@
+mat-button-toggle-group{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+mat-button-toggle{
+    width: 100%;
+    border: 1px solid gray;
+}
+mat-button-toggle:hover{
+    background-color: rgb(228, 228, 228);
+}
+.mat-button-toggle-group-appearance-standard {
+    border: none;
+}
