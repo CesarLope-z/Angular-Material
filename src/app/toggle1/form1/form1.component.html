@@ -1,7 +1,56 @@
 
 <div class="componente">
-<h2>Formulario</h2>
-<div class="componente-area">
+    
+    <cdk-accordion class="accordion">
+        <cdk-accordion-item #accordionItem="cdkAccordionItem" class="accordionItem">
+            <button
+            (click)="accordionItem.toggle()"
+            [attr.aria-expanded]="accordionItem.expanded"
+            >
+            Accordion
+            @if(!itemVisible && !accordionItem.expanded){
+                <div class="alerta">Puedes volver a abrir este item cuando quieras</div>
+            }
+            </button>
+        </cdk-accordion-item>
+    </cdk-accordion>
+@if(accordionItem.expanded ){
+    <div class="itemExpand">
+        <cdk-accordion class="">
+            @for (item of items; track item; let index = $index) {
+                <cdk-accordion-item 
+                    #accordionItem2="cdkAccordionItem" 
+                    (closed)="seCerro(item)"
+                    (destroyed)="seDestruyo()">
+                <button
+                    class="items"
+                    (click)="accordionItem2.toggle()"
+                    tabindex="0"
+                    [attr.id]="'accordion-header-' + index"
+                    [attr.aria-expanded]="accordionItem2.expanded"
+                    [attr.aria-controls]="'accordion-body-' + index">
+                    {{ item }}
 
-</div>
+                </button>
+                @if(accordionItem2.expanded) {
+                <div
+                    class="itemExpand2"
+                    role="region"
+                    [style.display]="accordionItem2.expanded ? '' : 'none'"
+                    [attr.id]="'accordion-body-' + index"
+                    [attr.aria-labelledby]="'accordion-header-' + index"
+                    >
+                    Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Perferendis excepturi incidunt ipsum
+                    deleniti labore, tempore non nam doloribus blanditiis veritatis illo autem iure aliquid ullam
+                    rem tenetur deserunt velit culpa?
+                </div>
+            }
+        </cdk-accordion-item>
+    }
+    </cdk-accordion>
+
+    </div>
+}
+
+
 </div>
