@@ -2,106 +2,113 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 
-export interface datos {
-  actividad: string;
-  enero: number;
-  febrero: number;
-  marzo: number;
-  abril: number;
-  mayo: number;
-  junio: number;
-  julio: number;
-  agosto: number;
-  septiembre: number;
-  octubre: number;
-  noviembre: number;
-  diciembre: number;
+export interface PagoMes {
+  pago1: number;
+  pago2: number;
+  pago3: number;
+  pago4: number;
 }
 
-const Datos: datos[] = [
+export interface Datos {
+  actividad: string;
+  enero: PagoMes;
+  febrero: PagoMes;
+  marzo: PagoMes;
+  abril: PagoMes;
+  mayo: PagoMes;
+  junio: PagoMes;
+  julio: PagoMes;
+  agosto: PagoMes;
+  septiembre: PagoMes;
+  octubre: PagoMes;
+  noviembre: PagoMes;
+  diciembre: PagoMes;
+}
+
+const datos: Datos[] = [
   {actividad: "Pago 1", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   },
   {actividad: "Pago 2", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   },
   {actividad: "Pago 3", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   },
   {actividad: "Pago 4", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   },
   {actividad: "Pago 5", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   },
   {actividad: "Pago 6", 
-    enero: 0, 
-    febrero:0, 
-    marzo:0, 
-    abril:0,
-    mayo: 0,
-    junio: 0,
-    julio: 0,
-    agosto: 0,
-    septiembre: 0,
-    octubre: 0,
-    noviembre: 0,
-    diciembre: 0
+    enero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }, 
+    febrero: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    marzo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    abril: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    mayo: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    junio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    julio: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    agosto: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    septiembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    octubre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    noviembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 },
+    diciembre: { pago1: 0, pago2: 0, pago3: 0, pago4: 0 }
   }
 ]
 
@@ -114,10 +121,10 @@ const Datos: datos[] = [
 
 export class TableComponent {
   columnas: string[] = ['actividad', 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'noviembre', 'diciembre']
-  dataSource = Datos;
+  dataSource = datos;
   
   cambio(){
-    console.log(Datos)
+    console.log(datos)
   }
   
 }

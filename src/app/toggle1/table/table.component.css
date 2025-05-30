@@ -4,18 +4,65 @@
     background-color: rgb(139, 139, 252);
     margin: 1rem;
     padding: 0 10px;
-}
-input{
-    padding: 10px;
+
+    overflow-x: auto;
+    max-width: 100%;
+    padding: 0.5rem;
 }
 .inputText{
     width: 140px;
+    height: 28px;
 }
 .inputNumber{
-    width: 40px;
-    height: 10px;
+    width: 25px;
+    height: 28px;
     background-color: white;
 }
 .form{
     background-color: transparent;
+    min-width: 1000px; /* ajusta según la cantidad de columnas */
+    width: max-content;
+}
+.flex{
+    display: flex;
+}
+th{
+    text-align: center;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+    padding: 10px;
+}
+
+.sticky-col {
+  position: sticky;
+  left: 0;
+  background-color: rgb(139, 139, 252);
+  z-index: 2;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Sombra suave opcional */
+}
+
+/* Asegura que la cabecera esté por encima de todo */
+th.sticky-col {
+  z-index: 3;
+  background-color: rgb(139, 139, 252)
+}
+
+@media (max-width: 768px) {
+  .form {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .inputNumber {
+    width: 100%;
+  }
 }
