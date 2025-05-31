@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 export interface PagoMes {
   pago1: number;
@@ -114,7 +115,7 @@ const datos: Datos[] = [
 
 @Component({
   selector: 'app-table',
-  imports: [MatTableModule, FormsModule],
+  imports: [MatTableModule, FormsModule, CdkAccordionModule],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
 })

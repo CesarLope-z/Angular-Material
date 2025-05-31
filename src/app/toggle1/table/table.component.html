@@ -1,5 +1,18 @@
 <div class="componente">
 
+    <cdk-accordion class="accordion">
+        <cdk-accordion-item #accordionItem="cdkAccordionItem" class="accordionItem">
+            <button
+            (click)="accordionItem.toggle()"
+            [attr.aria-expanded]="accordionItem.expanded"
+            >
+            Table
+            </button>
+        </cdk-accordion-item>
+    </cdk-accordion>
+
+    @if(accordionItem.expanded ){
+
     <table mat-table [dataSource]="dataSource" class="form">
         <ng-container  matColumnDef="actividad">
             <th mat-header-cell *matHeaderCellDef class="sticky-col"> Actividades </th>
@@ -169,5 +182,6 @@
     </table>
 
     <button (click)="cambio()">Show results</button>
+}
 
 </div>

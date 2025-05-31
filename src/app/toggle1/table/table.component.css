@@ -7,7 +7,15 @@
 
     overflow-x: auto;
     max-width: 100%;
-    padding: 0.5rem;
+}
+button{
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: large;
+    color: blue;
+    width: 100%;
+    text-align: left;
 }
 .inputText{
     width: 140px;

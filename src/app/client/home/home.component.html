@@ -3,19 +3,16 @@
 <!-- <p>home works!</p> -->
 
 <div>
-    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" class="toggle1">
-        <mat-button-toggle value="1">Toggle1</mat-button-toggle>
-        <mat-button-toggle value="2">Table</mat-button-toggle>
-        <mat-button-toggle value="3">C</mat-button-toggle>
-        <mat-button-toggle value="4">D</mat-button-toggle>
-    </mat-button-toggle-group>
-</div>
-@if (toggleGroup.value==="1"){
-    <app-form1></app-form1>
-}
-@if (toggleGroup.value==="2"){
-    <app-table></app-table>
-}
-
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+        <mat-tab label="A">
+        </mat-tab>
+        <mat-tab label="Formulario">
+            <app-form1></app-form1>
+        </mat-tab>
+        <mat-tab label="Table">
+            <app-table></app-table>
+        </mat-tab>
+        <mat-tab label="C"></mat-tab>
+    </mat-tab-group>
 
 <app-footer></app-footer>
