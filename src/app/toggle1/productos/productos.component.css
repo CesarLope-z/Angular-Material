@@ -1,0 +1,30 @@
+.componente{
+    border: 1px solid orange;
+    color: orange;
+    background-color: rgb(255, 210, 127);
+    margin: 1rem;
+    padding: 0 10px;
+
+    overflow-x: auto;
+    max-width: 100%;
+}
+button{
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: large;
+    color: orange;
+    width: 100%;
+    text-align: left;
+}
+.form{
+    background-color: transparent;
+}
+.input, .total{
+    height: 28px;
+}
+.total{
+    border: solid 2px orange;
+    background-color: white;
+    text-align: center;
+}
