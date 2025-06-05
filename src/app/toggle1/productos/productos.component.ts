@@ -7,6 +7,7 @@ export interface Productos {
   producto: string;
   cantidad: number;
   precioUnitario: number;
+  imprevisto: number;
   precioTotal: number;
 }
 const productos: Productos[] = [
@@ -14,18 +15,21 @@ const productos: Productos[] = [
     producto: "Producto 1",
     cantidad: 0,
     precioUnitario: 1,
+    imprevisto: 0,
     precioTotal: 0
   },
   {
     producto: "Producto 2",
     cantidad: 10,
     precioUnitario: 1,
+    imprevisto: 0,
     precioTotal: 0
   },
   {
     producto: "Producto 3",
     cantidad: 1,
     precioUnitario: 1,
+    imprevisto: 0,
     precioTotal: 0
   }
 ]
@@ -38,7 +42,7 @@ const productos: Productos[] = [
 })
 export class ProductosComponent {
 
-  columnas: string[] = ['producto', 'cantidad', 'precioUnitario', 'precioTotal']
+  columnas: string[] = ['producto', 'cantidad', 'precioUnitario', 'imprevisto', 'precioTotal']
   dataSource = productos;
   
   sumarTotal(){

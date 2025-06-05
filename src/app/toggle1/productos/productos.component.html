@@ -35,10 +35,17 @@
             </td>
         </ng-container>
 
+        <ng-container  matColumnDef="imprevisto">
+            <th mat-header-cell *matHeaderCellDef> imprevisto </th>
+            <td mat-cell *matCellDef="let element" >
+                <input class="input" [(ngModel)]="element.imprevisto" type="number">
+            </td>
+        </ng-container>
+
         <ng-container  matColumnDef="precioTotal">
             <th mat-header-cell *matHeaderCellDef> precio Total </th>
             <td mat-cell *matCellDef="let element" >
-                <p  class="total">$ {{element.cantidad*element.precioUnitario}}</p>
+                <p  class="total">$ {{element.cantidad*element.precioUnitario+element.imprevisto}}</p>
             </td>
         </ng-container>
 
